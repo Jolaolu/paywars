@@ -1,24 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import Header from './components/Header.js'
+import {fetchCharacters, useFetch} from "./utils/service"
+// import Loader from './components/Loader.js'
+import "./styles/main.scss"
+import Dropdown from "./components/Dropdown"
 
-function App() {
+
+const App = () => {
+  const{loading, movies, error} = useFetch()
+  console.log( loading, movies, error )
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+        <Dropdown movies={movies} />
+      {/* <Loader/> */}
     </div>
   );
 }
