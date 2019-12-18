@@ -1,8 +1,10 @@
 import React from 'react'
 
-const Toast = () =>{
+const Toast = (error) =>{
     return(
-        
+        <div className="toast">
+
+        </div>
     )
 }
 export default Toast

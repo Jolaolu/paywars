@@ -1,12 +1,14 @@
 .dropdown{
     display:flex;
     justify-content: center;
-    margin-top: 10rem;
+    margin-top: 6rem;
     color: yellow;
     .select-movie{
        label{
            display: block;
            font-weight: bold;
+           margin-bottom: 1rem;
+           text-transform: uppercase;
        }
        select{
            padding: .5rem 2rem;
@@ -14,6 +16,7 @@
            border-radius: .1rem;
            font-size: 1rem;
            text-align: left;
+           outline: none;
        }
     }
 }

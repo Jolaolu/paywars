@@ -1,17 +1,16 @@
-import React, {useState} from "react";
+import React from "react";
 
-const Dropdown = ( { titles, selectMovie } ) => {
-    console.log( titles, selectMovie )
-    let selected 
+const Dropdown = React.memo(( { titles, handleSelectMovie } ) => {
+
     function handleClick (e) {
-        selectMovie( e.target.value );
+        handleSelectMovie( e.target.value );
     }
     return (
         <div className="dropdown">
             <form action="" className="select-movie">
-                <label htmlFor="Movies">Movie Names</label>
+                <label htmlFor="Movies">Choose a Movie</label>
                 <select id="movies"  value={ titles.title } onChange={handleClick} >
-                    <option> Choose a Movie</option>
+                    <option> </option>
                     {  titles.map( movie => (
                         <option value={ movie.title } key={movie.episode_id}> { movie.title } </option>
                     ))}
@@ -21,5 +20,5 @@ const Dropdown = ( { titles, selectMovie } ) => {
         </div>
 
     )
-}
+})
 export default Dropdown;
