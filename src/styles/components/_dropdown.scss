@@ -1,0 +1,19 @@
+.dropdown{
+    display:flex;
+    justify-content: center;
+    margin-top: 10rem;
+    color: yellow;
+    .select-movie{
+       label{
+           display: block;
+           font-weight: bold;
+       }
+       select{
+           padding: .5rem 2rem;
+           border: 1px solid black;
+           border-radius: .1rem;
+           font-size: 1rem;
+           text-align: left;
+       }
+    }
+}
